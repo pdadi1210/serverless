@@ -23,6 +23,8 @@ service: serverless
 provider:
   name: aws
   runtime: nodejs12.x
+  stage: ${opt:stage,'dev'}
+  role: arn:aws:iam::#{AWS::AccountId}:role/serverless_${self:provider.stage}
 
 # you can overwrite defaults here
 #  stage: dev
@@ -111,3 +113,13 @@ functions:
 #     NewOutput:
 #       Description: "Description for the output"
 #       Value: "Some output value"
+custom:
+  stages:
+    dev: dev
+    QA: qa
+    demo: demo
+    stage: stage
+    prod: prod
+  prune:
+    automatic: true
+    number: 2
