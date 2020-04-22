@@ -5,7 +5,7 @@ module.exports.hello = async event => {
     statusCode: 200,
     body: JSON.stringify(
       {
-        message: 'welcome to feature test to merge final',
+        message: 'welcome to feature test to merge final success',
         input: event,
       },
       null,
