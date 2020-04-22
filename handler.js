@@ -5,7 +5,7 @@ module.exports.hello = async event => {
     statusCode: 200,
     body: JSON.stringify(
       {
-        message: 'welcome to git release branch creation and merge task final testing',
+        message: 'welcome to git release branch creation and merge task final testing passed',
         input: event,
       },
       null,
